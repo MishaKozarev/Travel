@@ -1,0 +1,258 @@
+/* aleo-regular - latin */
+@font-face {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/aleo-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/aleo-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* aleo-italic - latin */
+  @font-face {
+    font-family: 'Aleo';
+    font-style: italic;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/aleo-v11-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/aleo-v11-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* aleo-700 - latin */
+  @font-face {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/aleo-v11-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/aleo-v11-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+  /* red-hat-text-regular - latin */
+@font-face {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/red-hat-text-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/red-hat-text-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* red-hat-text-500 - latin */
+  @font-face {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+         url('../fonts/red-hat-text-v13-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/red-hat-text-v13-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+html{
+    box-sizing: border-box;  /*фиксирует границы у все блоков*/
+}
+*, *::before, *::after{
+    box-sizing: inherit;     /*Наследование для всех элементов*/
+  } 
+body{
+    background-color: #e5e5e5;
+    margin: 0;
+}
+li{
+    list-style-type: none;
+}
+.container{
+    
+    background: url(image/prewiev.png) no-repeat center;
+    background-size: cover; /*Покрывает блок при любых размерах*/
+    max-width: 1440px;
+    margin: 0 auto;  /*Выранивает внутри heder по центру*/
+}
+/*HEADER STYLE START*/
+
+.header{
+    position: relative;
+    height: 90px;
+    background-color: rgba(242, 120, 92, 0.7);
+    filter: drop-shadow(0px 4px 4px rgba(13, 96, 11, 0.5));
+    
+    width: 100%;
+}
+.header_wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+.header_logo{
+    width: 216.75px;
+    height: 31px;
+    margin-top: 25px;
+}
+.header_nav_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+.header_nav_item{
+    margin-right: 42px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
+}
+.header_nav_link{
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+.header_nav_lin:hover, .header_nav_lin:focus,.header_nav_lin:active{
+    opacity: 0.75;
+
+
+}
+.header_button{
+    width: 103px;
+    height: 41px;
+    background: #0D606F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: 0;
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF; 
+    margin-top: 25px;
+}
+
+/*HEADER STYLE END*/
+
+/*SECTION PREVIEW STYLE START*/
+
+.preview{
+    position: relative;
+    height: 765px; 
+
+}
+
+.preview_block{
+    width: 892px;
+    height: 422px;
+    margin-left: 120px;
+    margin-top: 32px;
+
+}
+.preview_block h1{
+    margin: 0;
+    font-family: 'Aleo', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 96px;
+    color: #FFFFFF;
+}
+
+.preview_block p{
+    
+    font-family: 'Aleo', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-top: 40px;
+}
+.preview_form{
+    /* position: absolute; */
+    width: 892px;
+    height: 95px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+
+    
+}
+
+.preview_button{
+    min-width: 228px;
+    min-height: 59px;
+    padding: 0 10px;
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #0d606f;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border: none;
+    border-radius: 10px;
+    transition: color 0.3s;
+    white-space: nowrap;
+    margin-left: 45px;
+}
+
+.preview_input{
+    font-family: 'Aleo', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #F2785C;
+    border: none;
+    outline: none;
+    background: transparent;  
+    margin-left: 41px;
+    width: 560px;
+
+}
+.preview_input::placeholder {
+    color: #f2785c;
+  }
+
+  /*SECTION PREVIEW STYLE END*/
+
+  .step {
+    position: relative;
+    max-width: 1170px;
+    height: 247px; 
+    background-color: #0d606f;
+    margin: 0 auto;
+  }
+
+.step_block{
+    max-width: 1170px;
+    
+
+  
+  }
+.step_block_three{
+    background-color: red;
+    max-width: 1170px;
+    height: 154px; 
+    display: flex;
+    justify-content: space-between;
+    margin-top: 93px;
+}
+.step_block_three_one{
+    background-color: green;
+    width: 247px;
+    height: 154px; 
+}
+.step_block_three_two{
+    background-color: yellow;
+    width: 222px;
+    height: 154px; 
+}
+.step_block_three_three{
+    background-color: blue;
+    width: 317px;
+    height: 154px; 
+}
