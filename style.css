@@ -1,52 +1,7 @@
-/* aleo-regular - latin */
-@font-face {
-    font-family: 'Aleo';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''),
-         url('../fonts/aleo-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/aleo-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* aleo-italic - latin */
-  @font-face {
-    font-family: 'Aleo';
-    font-style: italic;
-    font-weight: 400;
-    src: local(''),
-         url('../fonts/aleo-v11-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/aleo-v11-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* aleo-700 - latin */
-  @font-face {
-    font-family: 'Aleo';
-    font-style: normal;
-    font-weight: 700;
-    src: local(''),
-         url('../fonts/aleo-v11-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/aleo-v11-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-
-  /* red-hat-text-regular - latin */
-@font-face {
-    font-family: 'Red Hat Text';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''),
-         url('../fonts/red-hat-text-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/red-hat-text-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* red-hat-text-500 - latin */
-  @font-face {
-    font-family: 'Red Hat Text';
-    font-style: normal;
-    font-weight: 500;
-    src: local(''),
-         url('../fonts/red-hat-text-v13-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/red-hat-text-v13-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
 
 html{
     box-sizing: border-box;  /*фиксирует границы у все блоков*/
+    scroll-behavior: smooth; 
 }
 *, *::before, *::after{
     box-sizing: inherit;     /*Наследование для всех элементов*/
@@ -54,27 +9,38 @@ html{
 body{
     background-color: #e5e5e5;
     margin: 0;
+    width: 100%;
 }
+/* img{
+    display: block;
+    object-fit: contain;
+  } */
 li{
     list-style-type: none;
 }
 .container{
-    
-    background: url(image/prewiev.png) no-repeat center;
-    background-size: cover; /*Покрывает блок при любых размерах*/
-    max-width: 1440px;
-    margin: 0 auto;  /*Выранивает внутри heder по центру*/
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    max-width: 1440px;  
+    background: rgba(255, 255, 255, 1);  
+    position: relative;
 }
 /*HEADER STYLE START*/
 
 .header{
     position: relative;
+}
+
+.header_bg{
+    position: absolute;
     height: 90px;
-    background-color: rgba(242, 120, 92, 0.7);
-    filter: drop-shadow(0px 4px 4px rgba(13, 96, 11, 0.5));
-    
+    background: rgba(242, 120, 92, 0.7);
+    box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
     width: 100%;
 }
+
+
 .header_wrapper{
     max-width: 1200px;
     margin: 0 auto;
@@ -136,20 +102,25 @@ li{
 /*SECTION PREVIEW STYLE START*/
 
 .preview{
-    position: relative;
+
     height: 765px; 
+    background: url(image/prewiev.png) no-repeat center;
+    background-size: cover; /*Покрывает блок сохраняя размеры*/
+
 
 }
 
 .preview_block{
-    width: 892px;
-    height: 422px;
+    max-width: 892px;
     margin-left: 120px;
-    margin-top: 32px;
+    padding-top: 122px; 
+
+    
 
 }
 .preview_block h1{
-    margin: 0;
+    margin-bottom: 33px;
+    margin-top: 0px;
     font-family: 'Aleo', serif;
     font-style: normal;
     font-weight: 700;
@@ -166,7 +137,8 @@ li{
     font-size: 20px;
     line-height: 24px;
     color: #FFFFFF;
-    margin-top: 40px;
+    margin-bottom: 45px;
+    
 }
 .preview_form{
     /* position: absolute; */
@@ -219,40 +191,40 @@ li{
 
   /*SECTION PREVIEW STYLE END*/
 
-  .step {
+.steps{
     position: relative;
-    max-width: 1170px;
+    max-width: 1177px;
     height: 247px; 
     background-color: #0d606f;
+    margin-left: 125px;
+
+  }
+
+.steps_block{
+    max-width: 1177px;
+    /* display: flex; */
+  }
+
+.steps_block_main{
+    max-width: 611px;
     margin: 0 auto;
-  }
+}
 
-.step_block{
-    max-width: 1170px;
-    
+.steps_block_main h2{
+    font-family: "Red Hat Text", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+}
 
-  
-  }
-.step_block_three{
-    background-color: red;
-    max-width: 1170px;
-    height: 154px; 
+.steps_block_box_icon{
     display: flex;
-    justify-content: space-between;
-    margin-top: 93px;
+    align-items: center;
 }
-.step_block_three_one{
-    background-color: green;
-    width: 247px;
-    height: 154px; 
-}
-.step_block_three_two{
-    background-color: yellow;
-    width: 222px;
-    height: 154px; 
-}
-.step_block_three_three{
-    background-color: blue;
-    width: 317px;
-    height: 154px; 
+.steps_icon_three_img{
+    position: absolute;
+    height: 100px;
+    width: 100px;
 }

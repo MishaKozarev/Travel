@@ -1,2 +1,2 @@
 # Travel
-https://mishakozarev.github.io/Travel/
+https://MishaKozarev.github.io/Travel/
