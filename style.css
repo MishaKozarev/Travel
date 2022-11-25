@@ -415,6 +415,13 @@ li{
     
 }
 
+.stories_card_container{
+    background: rgba(255, 255, 255, 0.7);
+    padding: 40px 15px 40px 15px;
+    height: 1260px;
+
+}
+
 .stories_card{
     max-width: 1177px;
     height: 250px;
@@ -425,16 +432,12 @@ li{
     
 }
 
-.stories_card_container{
-    background: rgba(255, 255, 255, 0.7);
-    padding: 40px 15px 40px 15px;
-    height: 1260px;
 
-}
 
 .stories_card img{
     filter: drop-shadow(0px 4px 4px #0D606F);
     border-radius: 16px;
+    margin-right: 25px;
 }
 
 .stories_card_text h3{
